@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperature Converter</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        body{
+         background-image:url(./cool-background.png);
+         background-size: cover;
+        }
+
+        h1{
+            background-color:#000000b4 ;
+            color:cornsilk;
+            height:50px;
+            font-family: cursive;
+            text-align: center;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+
+        }
+        .container{
+            height: 40vh;
+            width: 80%;
+            border: rgb(2, 2, 2) 2px solid ;
+            margin: 200px auto;
+            
+            background-color: rgba(0, 0, 0, 0.459);
+            border-radius: 10px;  
+        }
+        .inpdiv{
+         position: relative;
+         left:80px;
+         top:40px;
+         
+            
+        }
+        input{
+            height: auto;
+            width: auto;
+            padding: 5px;
+            margin: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    .tem{
+        font-size: 30px;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>
+        temperature Converter
+    </h1>
+    <div class="container">
+       <div class="inpdiv">
+           <label class="tem">Celsius :</label>
+       <input type="number" id="cel" placeholder="Celsius" value="0">
+       <label class="tem">fahrenheit :</label>
+        <input type="number" id="fah" placeholder="fahrenheit" value="32">
+    </div>
+    </div>
+    <script>
+        var cel = document.getElementById("cel");
+        var fah = document.getElementById("fah");
+
+        cel.addEventListener("input", function(){
+           let c = this.value;
+           let f = (c * 9/5)+ 32;
+           if(!Number.isInteger(f)){
+                f = f.toFixed(4);
+           }
+           fah.value = f;
+        });
+          
+          fah.addEventListener("input", function(){
+              let f = this.value;
+              let c = (f - 32)* 5/9;
+              if(!Number.isInteger(c)){
+                  c = c.toFixed(4);
+              }
+              cel.value = c;
+
+          });
+    </script>
+</body>
+</html>
