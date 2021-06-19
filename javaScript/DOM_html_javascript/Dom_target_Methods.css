@@ -1,0 +1,54 @@
+  * {
+      font-family: auto;
+      background-repeat: no-repeat;
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      text-transform: capitalize;
+      color: black;
+  }
+  
+  .navbar,
+  ul,
+  li,
+  a {
+      text-decoration: none;
+      color: #040505;
+      padding: 10px;
+  }
+  
+  a:hover {
+      background-color: rgba(110, 40, 181, 0.337);
+  }
+  
+  .perentdiv {
+      background-image: linear-gradient( 65.9deg, rgba(85, 228, 224, 1) 5.5%, rgba(75, 68, 224, 0.74) 54.2%, rgba(64, 198, 238, 1) 55.2%, rgba(177, 36, 224, 1) 98.4%);
+      height: 100vh;
+      width: 40%;
+      position: relative;
+      margin: auto;
+      padding: 10px;
+      top: 10px;
+      border-radius: 8px;
+  }
+  
+  .heading {
+      background-color: black;
+      width: 100%;
+      height: 50px;
+      top: 50px;
+      position: relatives;
+      text-align: center;
+      text-shadow: 2px 2px 3px #ffffffee;
+  }
+  
+  .new {
+      background-color: red;
+  }
+  
+  .and {
+      background-color: #030403;
+      height: auto;
+      color: green;
+      width: auto;
+  }

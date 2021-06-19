@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM css javascript</title>
+    <style>
+        .xyz {
+            background-color: yellow;
+        }
+        
+        .new {
+            background-color: crimson;
+            height: 100px;
+        }
+        
+        .old {
+            background-color: greenyellow
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="banner">
+        <h1 id="page-header" class="banner-title" style=" background-color: red; height: 50px;"> this is first heading of the page</h1>
+        <h1 id="second-page-header" style=" background-color:purple">this is second heading of the page</h1>
+        <h1 class="third-page-header abc ">this is third heading of the page</h1>
+    </div>
+    <script type="text/javascript">
+        //===========Style method=======
+
+        //========modified style height 
+
+        // var element = document.querySelector("#page-header").style.height = "100px";
+        // console.log(element);
+
+        //========Adding new style 
+
+        // var element = document.querySelector("#page-header").style.color = "violet";
+        // console.log(element);
+
+
+
+        //===========ClassName method===============
+        //Adding new style className to  
+
+        // var element = document.querySelector(".third-page-header").className = "xyz";//return in arrays
+        // //Adding new style attribute
+        // // element = document.querySelector("#third-page-header").className;
+        // var elem = document.querySelector("#page-header").className;//return name of the className
+        // console.log(elem);
+
+
+
+        //==============Class List============
+
+        // var element = document.querySelector(".third-page-header").classList = "new old";//return in object
+        // elem = document.querySelector(".third-page-header").classList;
+        // console.log(elem);
+        // var element = document.querySelector(".third-page-header").classList.add("old", "abx", "pwd"); //.add (adding multiple new className)
+        var el = document.querySelector(".third-page-header").classList;
+        elem = document.querySelector(".third-page-header").classList.remove("abc"); //remove class to  .classList.remove
+        console.log(el);
+    </script>
+</body>
+
+</html>

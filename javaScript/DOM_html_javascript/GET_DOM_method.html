@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Dom method
+    </title>
+</head>
+<style>
+
+</style>
+
+
+<body>
+    <div id="container" class="first" style="background-color:blue;
+    font-size: 50px;">
+        <p>this is paragraph</p>
+    </div>
+    <script>
+        // var p = document.getElementById('container'); //getting the element by id
+        // // console.log(p);
+        // p.setAttribute('class', 'second');
+        // // p.className = 'second';//both are same o
+        // //replace value and class name
+        // var s = p.getAttribute('id');
+        // console.log(s);
+        // console.log(p);
+        // p.setAttribute('title', 'my_title')
+        //     /*add new attribute*/
+        // console.log(p);
+
+
+        //-----Styling with set attribute
+        // //------wrong method
+        p.setAttribute('style', 'background-color:red;'); //replace all css properties 
+        //--right method
+        p.style.backgroundColor = 'red';
+        p.style.fontStyle = 'italic';
+        //modified style by this method
+        p.setAttribute('style', 'font-weight:20px;');
+
+        //------removeAttribute------
+        // p.removeAttribute('style');
+        //removing attribute in tag
+    </script>
+</body>
+
+</html>

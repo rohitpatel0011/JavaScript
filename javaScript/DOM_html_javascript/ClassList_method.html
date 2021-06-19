@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clasList method</title>
+    <style>
+        .heading {
+            background-color: navy;
+        }
+        
+        .new {
+            height: 100px;
+            background-color: red;
+        }
+        
+        .xyz {
+            background-color: yellow;
+        }
+        
+        .clstoggle {
+            background-color: pink;
+        }
+        
+        .sclstoggle {
+            background-color: rgb(214, 15, 158);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="new xyz pqr" id="heading">
+            classListMethods
+        </h1>
+        <h4>classList.add(class ,class2,...)</h4>
+        <h4>classList.remove(class1,class2,....)</h4>
+        <h4 class="clstoggle sclstoggle" id="toggle">classList.toggle(class)</h4>
+        <h4 class="ans abx joj" id="contains">
+            classList.contain(class)</h4>
+        <h4 class="and some" id="item">classList.item(index)</h4>
+        <h4>classList.Length</h4>
+
+    </div>
+    <script>
+        //========
+        var element = document.getElementById("heading").addEventListener("click", abc);
+
+        /*use can also use with internal function*/
+        function abc() {
+            document.getElementById("heading").classList.add("new", "pqr");
+            //add multiple class
+        };
+
+
+
+        /*====remove classList (.classList.remove)====*/
+        document.getElementById("heading").classList.remove("new"); /*when i click this event this remove the "new" class*/
+
+        // };
+
+
+
+
+        /*print the value in console*/
+        var value = document.getElementById("heading").classList;
+        console.log(value);
+
+
+        /*=====classList.add method with internal function=============*/
+
+        var element = document.getElementById(".heading").addEventListener("click", function() {
+            this.classList.add("xyz");
+        });
+        console.log(element);
+
+
+        // === length Method ===
+
+        var element = document.getElementById("heading").addEventListener("click", abc);
+
+        function abc() {
+            var n = document.getElementById("heading").classList.length; /*return how many classes in tis element*/
+            console.log(n);
+
+        }
+
+
+
+        /*=======toggle method=======*/
+
+        var element = document.getElementById("toggle").addEventListener("click", abc);
+
+        function abc() {
+            var n = document.getElementById("toggle").classList.toggle("sclstoggle");
+            /*toggle can do when clicked the element .toggle add this classList . if then clicked element can return the original (default) sate*/
+        }
+
+
+
+        /*=====item(index) Method========*/
+
+        var element = document.getElementById("item").addEventListener("click", abc);
+
+        function abc() {
+            var toggle_index = this.classList.item(0); //return 0th index of class name toggle. you can pick  the particular class name with index number*/
+            console.log(toggle_index);
+        }
+
+
+        /*======contain(class) Method=======*/
+        var element = document.getElementById("contains").addEventListener("click", abc);
+
+        function abc() {
+            var contains_check = this.classList.contains("pqrs");
+            console.log(contains_check); /*contains check class value are exists if then return true else false */
+        }
+    </script>
+</body>
+
+</html>

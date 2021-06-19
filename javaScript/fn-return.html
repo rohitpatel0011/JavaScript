@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fullname(firstname, middlename, lastname, age) {
+            var a = firstname + " " + middlename + " " + lastname + " " + age;
+            return a;
+        }
+        var name = fullname("golu", "kumar", "patel", 46);
+        document.write(name);
+
+        //---------------------------------
+        function lessby20_others(x, y, z) {
+            var a = (x >= 20 && (x < y || x < z)) ||
+                (y >= 20 && (y < x || y < z)) ||
+                (z >= 20 && (z < y || z < x));
+            return a;
+        }
+        console.log(lessby20_others(10, 45, 10));
+        console.log(lessby20_others(23, 23, 10));
+        console.log(lessby20_others(21, 66, 75));
+        console.log(lessby20_others(26, 66, 75));
+        //-------------function arrays-----------------
+        function adding(m, n) {
+            var x = m + n;
+            return x;
+        }
+
+        var add = adding(23, 45);
+        console.log(add);
+    </script>
+
+</body>
+
+</html>

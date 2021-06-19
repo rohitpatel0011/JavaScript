@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #outer {
+            background-color: rgb(116, 116, 76);
+            height: 400px;
+            width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<div id="outer">
+    <h2>Nostalgia</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, commodi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, rem dolorem blanditiis, delectus placeat distinctio illo esse minus dignissimos non aperiam illum vero libero.
+        Qui, perferendis. Reiciendis quaerat voluptatem eius repudiandae rerum perspiciatis nulla, architecto vel accusantium ea qui ducimus, dolore eos unde vero illum nesciunt similique earum expedita, necessitatibus aspernatur vitae sed molestiae?
+        Nesciunt itaque quae sint exercitationem enim voluptate neque quod temporibus vitae. Ut illum enim incidunt, eum voluptate veritatis amet nihil et saepe voluptates, quidem placeat quis odio! Quas dolorum et doloremque ratione error nobis nihil
+        quaerat, animi praesentium corrupti ipsa neque molestiae esse, voluptatum tempora sit!</p>
+    <p id="xyz">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, ullam!</p>
+</div>
+
+<body>
+    <script>
+        var parentElement = document.getElementById("outer");
+        var target = document.getElementById("abc");
+        var findElement = parentElement.contains(target);
+        console.log(findElement); //return false because no element found with id name "abc"
+        /*================================================*/
+        var parentElement = document.getElementById("outer");
+        var target = document.getElementById("xyz");
+        var findElement = parentElement.contains(target);
+        console.log(findElement); //return true because element are exists in parentElement
+    </script>
+</body>
+
+</html>

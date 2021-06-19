@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test {
+            background-color: #729135;
+            height: 200px;
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>appendChild</h1>
+    <h1>insertBefore</h1>
+    <h1>insertAdjacentElement</h1>
+    <h1>insertAdjacentHTML</h1>
+    <h1>insertAdjacentText</h1>
+    <div id="test">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias temporibus doloremque modi cum libero nostrum? Sit dolore corrupti sed reiciendis adipisci distinctio repudiandae, minus ratione necessitatibus suscipit reprehenderit consequatur eos
+        blanditiis numquam quidem, libero consequuntur fugit odio obcaecati excepturi enim ut quae illo cumque! Autem sint nesciunt excepturi deleniti temporibus.</div>
+
+    <script>
+        /**adding textNode in NewElement  tag =====*/
+        /*===WITH USING APPEND METHOD====*/
+
+
+
+        //===appendChild===*/
+
+
+
+        /*=====creating TextNode=====*/
+
+        // var newElement = document.createElement("h2");
+        // console.log(newElement);
+
+        // var newTextNode = document.createTextNode("this is new textNode")
+        // console.log(newTextNode);
+
+
+        // newElement.appendChild(newTextNode); //appending text in new element(tag</>)*/
+        // document.getElementById("newElement").appendChild(newElement); /*insert in webpage in last of id name newElement*/
+        // /*you want to add first in heading */
+
+        // /*====Using insert Before=====*/
+        // var target = document.getElementById("newElement");
+        // target.insertBefore(newElement, target.childNodes[0]); /*0 is index od targeted id and insertBefore [0]th index adding first in head */
+
+
+        /*====insertAdjacentElement=====*/
+        var newElement = document.createElement("h1");
+        var newText = document.createTextNode("this is some text");
+        newElement.appendChild(newText);
+        var append = document.getElementById("test");
+        append.insertAdjacentElement("beforebegin", newElement);
+
+
+        /*insertAdjacentElement=====*/
+
+        var target = document.getElementById("test");
+        var newElement = "<h1>Rohit Patel</h1>";
+        target.insertAdjacentHTML("afterend", newElement);
+
+
+
+        /*===insertAdjacentText=====*/
+        var target = document.getElementById("test");
+        var newText = "my name is Rohit Patel";
+        target.insertAdjacentText("beforebegin", newText);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt box java script</title>
+
+</head>
+
+<body>
+    <script>
+        var per = prompt //popup input field by user//
+            ("enter your percentage : ");
+        if (per >= 80 && per <= 100) {
+            document.write("<h1> you are in merit </h1>");
+        } else if (per >= 60 && per < 79) {
+            document.write("<h1>you in 1st div <\h1>");
+        } else if (per >= 45 && per < 59) {
+            document.write("<h1>you in 2st div </h1>");
+        } else if (per >= 33 && per < 44) {
+            document.write("<h1> you in 3st div </h1>");
+        } else if (per <= 32) {
+            document.write("<h1>you are fail</h1>");
+        } else {
+            document.write("<h1> please enter valid number</h1>");
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multidimensional arrays</title>
+</head>
+
+<body>
+
+    <script>
+        //   ---------------------------table form show data--------
+        let ary = [
+            ["rohit", 20, "male", "bca"],
+            ["sapna", 19, "female", "b.com"],
+            ["aman", 21, "male", "mca"],
+            ["rakesh", 27, "male", "b,tech"]
+        ];
+        document.write(ary[1]);
+        document.write(ary[1][2]); //its means  in 1 index of 2nd  value (inner-loop) output is female
+        /*ary[1] is outer loop(sapna) of multidimensional arry 
+        and ary[3] is inner loop(female) of multidimensional arry */
+        document.write("<table boder= '1px' cellspacing = '0'>");
+        for (var a = 0; a < 4; a++) {
+            document.write("<tr>");
+            for (var b = 0; b < 4; b++) {
+                document.write(ary[a][b] + " ");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+        //     //-----array method new -----------------
+
+
+        var ary = new Array(3); //fix the value of this array
+        for (a = 0; a < ary.length; a++) { //ary.length is ary = (3) 
+            ary[a] = prompt("input some text :"); //input from user in prompt box
+        }
+        document.write(ary);
+
+        //--------------example to print each string value with functions--------------
+        function printArray(a, b) {
+            var len = a.length,
+                var _len = b.length,
+                    i = 0;
+            if (len == 0 || _len == 0)
+                console.log("Empty Array");
+            else {
+                do {
+                    console.log(a[i]);
+                    console.log(b[i]);
+                } while (++i < len && ++i < _len);
+            }
+        }
+        printArray("rohit", "patel");
+    </script>
+</body>
+
+</html>

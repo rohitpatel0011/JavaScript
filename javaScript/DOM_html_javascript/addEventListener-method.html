@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add Event listener</title>
+</head>
+
+<body>
+    <div class="containr">
+        <h1 id="first-heading">this is first heading of this page
+        </h1>
+        <h1 id="second-heading">
+            this is second heading of this page
+        </h1>
+    </div>
+    <script>
+        var a = document.getElementById("first-heading").onclick = abc;
+        //.onclick event assign to xys function
+
+        function abc() {
+            document.getElementById("first-heading").style.backgroundColor = "green";
+        }
+
+
+
+
+
+        // //============================
+
+        var b = document.getElementById("second-heading").onclick = xyz;
+        /*.onclick event assign to xys function*/
+        function xyz() {
+
+            this.style.backgroundColor = "yellow";
+        };
+        console.log(b);
+
+
+        /*=====addEventListener new method ======================*/
+        /*object.addEventListener("events" function(){});*/
+
+
+        var heading = document.getElementById("first-heading");
+        heading.addEventListener("click", function() {
+            this.style.backgroundColor = "red";
+        });
+
+
+        /*===================*/
+        var h = document.getElementById("second-heading");
+        h.addEventListener("click", abc);
+
+        function abc() {
+            h.style.backgroundColor = "green";
+        }
+
+
+
+        /*===removeEventListener=======*/
+
+
+        var nd;
+        document.getElementById("first-heading").addEventListener("click", function() {
+            this.style.backgroundColor = "blue";
+        });
+        document.getElementById("first-heading").addEventListener("mouseleave", function() {
+                this.style.backgroundColor = "red";
+            })
+            /*remove the event mouseleave*/
+        function abc() {
+            document.getElementById("second-heading").removeEventListener("click")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom traversal method</title>
+    <style>
+        * {
+            text-transform: uppercase;
+        }
+        
+        #outer {
+            background: #ac7030;
+            height: 200px;
+            width: 50%;
+            margin: 200px auto;
+            border: 5px solid black;
+            padding: 20px;
+        }
+        
+        #inner {
+            background: #5a9481;
+            height: 150px;
+            width: 75%;
+            position: relative;
+            left: 60px;
+            bottom: 30px;
+            border: 3px solid black;
+            padding: 20px;
+        }
+        
+        .a {
+            display: inline-block;
+            border: 2px solid rgba(0, 0, 0, 0.6);
+            height: 65px;
+            width: 100px;
+            text-align: center;
+            background: rgb(58, 58, 136);
+        }
+        
+        .content {
+            position: absolute;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <p>outer</p>
+        <div id="inner">
+            <p>inner</p>
+            <div class="a" id="aa">A</div>
+            <div class="a" id="bb">B</div>
+            <div class="a" id="cc">C</div>
+            <div class="a" id="dd">D</div>
+        </div>
+    </div>
+    <div class="content">
+        <h2>parentNode</h2>
+        <h2>parentElement</h2>
+        <h2>children</h2>
+        <h2>childNodes</h2>
+        <h2>firstChild</h2>
+        <h2>firstElementChild</h2>
+        <h2>lastChild</h2>
+        <h2>lastElementChild</h2>
+        <h2>nextElementSibling</h2>
+        <h2>nextSibling</h2>
+        <h2>previousSibling</h2>
+        <h2>previousElementSibling</h2>
+
+    </div>
+    <script>
+        /*======parentNode=========*/
+
+        var element = document.getElementById("aa").parentNode.style.backgroundColor = "green";
+        console.log(element); //
+
+
+        /*=====parentElement========*/
+
+        var a = document.getElementById("aa").parentElement.style.backgroundColor = "yellow";
+        console.log(a);
+
+
+
+
+        /*=====Children===========*/
+
+        var a = document.getElementById("inner").children.style.backgroundColor = "red";
+        console.log(a);
+        var b = document.getElementById("inner").children[1].style.backgroundColor = "red";
+
+
+
+
+        /*=====childNode=======*/
+
+        var c = document.getElementById("inner").childNodes;
+        var c = document.getElementById("inner").childNodes.style.backgroundColor = "red";
+        console.log(c);
+
+
+
+        /*===========firstChild========*/
+
+        var d = document.getElementById("inner").firstChild;
+        var d = document.getElementById("inner").firstChild.style.backgroundColor = "red";
+        console.log(d);
+
+
+
+        /*===========firstElementChild=====*/
+
+        var e = document.getElementById("inner").firstElementChild.style.backgroundColor = "red";
+        console.log(e);
+
+
+
+        /*===========lastChild========*/
+
+        var f = document.getElementById("inner").lastChild.style.backgroundColor = "blue";
+        console.log(f);
+
+
+
+        /*=====lastElementChild=======*/
+
+        var g = document.getElementById("inner").lastElementChild.style.backgroundColor = "red";
+        console.log(g);
+
+
+
+        /*=====nextElementSiblings===*/
+
+        var h = document.getElementById("bb").nextElementSibling.style.backgroundColor = "red";
+        console.log(h);
+
+
+        /*=====nextSibling===*/
+
+        var i = document.getElementById("dd").nextSibling;
+        console.log(i); //count space between them
+
+
+        /*====previousSibling=====*/
+
+        var j = document.getElementById("aa").previousSibling;
+        console.log(j);
+
+
+
+        /*======previousElementSibling=====*/
+
+        var h = document.getElementById("aa").previousElementSibling;
+        console.log(h);
+    </script>
+
+
+</body>
+
+</html>

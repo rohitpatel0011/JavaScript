@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild </title>
+</head>
+
+<body>
+    <ul id="list">
+
+        <li>patna</li>
+        <li>pune</li>
+        <li>delhi</li>
+        <li>mumbai</li>
+    </ul>
+    <h1>appendChild</h1>
+    <h1>removeChild</h1>
+</body>
+<script>
+    /*replace child element====*/
+
+    var newElement = document.createElement('li'); //creating element 
+    var newText = document.createTextNode("apple"); //creating text node
+    newElement.appendChild(newText); //appending text node in element
+    var target = document.getElementById("list"); //target dom element where you 
+    var oldElement = target.children[0]; //targeting children add in first index of targeted element
+    target.replaceChild(newElement, oldElement); //parameter newElement 
+
+
+
+    /*===remove child element====*/
+
+
+    var target = document.getElementById("list"); //target parent dom element
+    var oldElement = target.children[0]; //target parent of child with index (we can delete any element and text node)
+    target.removeChild(oldElement);
+</script>
+
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom clone method</title>
+</head>
+
+<body>
+    <ul id="list1">
+        <li>Orange</li>
+        <li>Apple</li>
+        <li>Guava</li>
+        <li>Grapes</li>
+    </ul>
+    <ul id="list2">
+        <li>Carrot</li>
+        <li>Reddish</li>
+    </ul>
+    <h1 id="new"></h1>
+    <script>
+        var target = document.getElementById("list1").children[0];
+        var copyElement = target.cloneNode(true);
+        //clone node has two parameter "true" and "false" copy tag and his attribute not copy inner text 
+        //true parameter copy inner text also
+
+        // console.log(copyElement);
+        document.getElementById("list2").appendChild(copyElement); //append in any tag
+        document.getElementById("new").appendChild(copyElement); //append in targeted any tag
+    </script>
+</body>
+
+</html>
