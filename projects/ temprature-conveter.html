@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Balsamiq Sans' rel='stylesheet'>
     <title>temperature Converter</title>
     <style>
         *{
@@ -11,66 +12,131 @@
             padding: 0px;
             box-sizing: border-box;
             text-transform: capitalize;
+        font-family: 'Balsamiq Sans';
+
         }
 
         body{
-         background-image:url(./cool-background.png);
-         background-size: cover;
+         /* background-image:url(./cool-background.png); */
+        
+         background-color: ghostwhite;
+         background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
         }
 
         h1{
-            background-color:#000000b4 ;
-            color:cornsilk;
-            height:50px;
-            font-family: cursive;
-            text-align: center;
-            position: fixed;
-            top: 0px;
-            width: 100%;
+        
+        margin: 60px;
+        text-shadow:   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+        font-family: 'Balsamiq Sans';
+        font-size: 50px;
+        color: #4e524e;
+        font-weight: bold;
+
+        
 
         }
         .container{
-            height: 40vh;
-            width: 80%;
-            border: rgb(2, 2, 2) 2px solid ;
-            margin: 200px auto;
+            height: 80vh;
+            width: 50%;
+            box-shadow:inset 0 0 10px #000000;
+
+            margin:100px auto 100px auto;
             
-            background-color: #dbcccc75;
+            /* background-color:#a7a3a3ab; */
+            background: linear-gradient(90deg,#00C9FF  0%, #92FE9D 100%);
             border-radius: 10px;  
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
         }
         .inpdiv{
-         position: relative;
-         left:80px;
-         top:40px;
+         margin: 100px auto;
+         padding:10px;
+
+
+        
          
             
         }
         input{
-            height: auto;
-            width: auto;
-            padding: 5px;
-            margin: 30px;
-            font-weight: bold;
-            font-size: 20px;
+            width: 300px;
+            padding-left: 100px;
+            font-size: 18px;
             border-radius: 10px;
+            height: 60px;
+            box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+outline: none;
+border: none;
         }
     .tem{
         font-size: 30px;
+        display: block;
+margin: 20px;
+text-shadow:   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+    .color1{
+
+        height: 400px;
+        width: 400px;
+        background-color: #00C9FF ;
+        border-radius: 50% 0 50% 50% ;
+        position:absolute;
+        left: -10px;
+        top:-20px;
+        z-index: -1;
+        box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+
+
     }
 
     </style>
 </head>
 <body>
-    <h1>
-        temperature Converter
-    </h1>
+   
     <div class="container">
        <div class="inpdiv">
+
            <label class="tem">Celsius :</label>
        <input type="number" id="cel" placeholder="Celsius" value="0">
        <label class="tem">fahrenheit :</label>
         <input type="number" id="fah" placeholder="fahrenheit" value="32">
     </div>
+    </div>
+    <div class="color1">
+        <h1>temperature Converter</h1>
+
     </div>
     <script>
         var cel = document.getElementById("cel");
